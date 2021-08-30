@@ -1,0 +1,78 @@
+
+/* hacemos un formateo de todos los elementos */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+/* le asignamos el display de flex al body para poder alienar nuestro elemento y asi poder utilizar las propiedesdes de flex par centrarlo */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* con el min height hacemos que el minimo de altura que pueda tomar sea toda la vista de la ventana */
+    min-height: 100vh;
+}
+
+
+.circulo
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo
+{
+    /* ahora que ya tenemos al elemento padre con el position relative podemos utilzar lo que es para nosotors el position absolute */
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    /* agregamos la foto  */
+    background: url(foto.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    /* con filter podemos agregarle filtros */
+    filter: brightness(1.5) contrast(1.5);
+}
+
+.texto
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* con el efecto de animation podemos rotar el texto  y agregando que sea infiinito se hara todas las veces posibles en 10s */
+    animation: rotateText 10s linear infinite;
+}
+
+
+/* agregamos lo keyframes para que la rotacion se vea bien */
+@keyframes rotateText
+{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+
+.texto span
+{
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
