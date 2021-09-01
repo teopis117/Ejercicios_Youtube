@@ -1,0 +1,160 @@
+/* creamos estas variables para el uso en nuestro programa */
+:root{
+    --azul:#2990b9;
+    --azul-claro:#ecf4f9;
+    --border:1px solid rgba(0,0,0,0.1);
+}
+
+/* aplicamos estas propiedades para todos los elementos */
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* contenendor de los elementos */
+
+/* darle los primeros estilso a nuestro formulario */
+.contenedor
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 70px;
+    background: #f0f3f5;
+    min-height: 100vh;
+}
+
+
+
+.contenedor form
+{
+    width: 600px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    /* recordemos que con overflow hidden ocultaremos los elementos conforme nos convenga */
+    overflow: hidden;
+    text-align: center;
+}
+.botones{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor form .links
+{
+    background: #fff;
+    padding: 30px 15px;
+}
+
+.contenedor form .titulo
+{
+    font-size: 17px;
+    padding-bottom: 15px;
+    color: #666;
+}
+/* estilos para los bototnes de acceso con facebook y google */
+.contenedor form .links .botones .btn
+{
+font-size: 17px;
+margin: 5px;
+display: inline-block;
+border: var(--border);
+border-radius: 5px;
+padding: 10px 30px;
+color:  #333;
+}
+
+.contenedor form .links .botones .btn ion-icon
+{
+    color: #333;
+    padding-right: 5px;
+ }
+
+.contenedor form .links .botones .btn:hover
+{
+    color: #fff;
+    background-color: var(--azul);
+} 
+
+.contenedor form .links .botones .btn ion-icon
+{
+    color: #333;
+} 
+
+.contenedor form .input-box
+{
+    padding: 30px;
+    background-color: var(--azul-claro);
+}
+
+.contenedor form .input-box .input
+{
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border: var(--border);
+}
+
+.contenedor form .input-box .input input
+{
+height: 60%;
+width: 100%;
+padding: 10px;
+font-size: 16px;
+color: #333;
+text-transform: none;
+
+}
+
+.contenedor form .input-box .input ion-icon
+{
+    color: #999;
+    padding-right: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.contenedor form .checkbox
+{
+    text-align: left;
+    padding: 10px 0;
+}
+
+.contenedor form .checkbox label
+{
+    font-size: 17px;
+    cursor: pointer;
+    color:#333;
+}
+
+.contenedor form .input-box  .ingresar
+{
+    padding: 10px 40px;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: var(--azul);
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.contenedor form .input-box  .ingresar:hover
+{
+    letter-spacing: 2px;
+}
